@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container">
+    <h2 class="my-4">Lista de Proveedores</h2>
+    <ul class="list-group">
+      {% for proveedor in proveedores %}
+        <li class="list-group-item">{{ proveedor.nombre }} - {{ proveedor.rut }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endblock %}

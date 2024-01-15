@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="jumbotron">
+    <h1 class="display-4">Bienvenido al Sistema de Gestión de Almacén</h1>
+    <p class="lead">Selecciona una opción en el menú de navegación:</p>
+    <hr class="my-4">
+    <ul class="list-group">
+      <li class="list-group-item"><a href="{% url 'lista_proveedores' %}" class="btn btn-primary">Ver Proveedores</a></li>
+      <li class="list-group-item"><a href="{% url 'registrar_proveedor' %}" class="btn btn-success">Registrar Proveedor</a></li>
+      <li class="list-group-item"><a href="{% url 'lista_clientes' %}" class="btn btn-primary">Ver Clientes</a></li>
+      <li class="list-group-item"><a href="{% url 'registrar_cliente' %}" class="btn btn-success">Registrar Cliente</a></li>
+    </ul>
+  </div>
+{% endblock %}
