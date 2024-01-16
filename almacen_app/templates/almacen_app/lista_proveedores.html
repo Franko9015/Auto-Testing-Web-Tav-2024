@@ -1,12 +1,30 @@
+<!-- templates/almacen_app/lista_proveedores.html -->
 {% extends 'base.html' %}
 
 {% block content %}
-  <div class="container">
-    <h2 class="my-4">Lista de Proveedores</h2>
-    <ul class="list-group">
-      {% for proveedor in proveedores %}
-        <li class="list-group-item">{{ proveedor.nombre }} - {{ proveedor.rut }}</li>
-      {% endfor %}
-    </ul>
+  <div class="container mt-4">
+    <h2 class="mb-4">Lista de Proveedores</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Dirección</th>
+          <th scope="col">Teléfono</th>
+          <th scope="col">Categoría</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for proveedor in proveedores %}
+          <tr>
+            <th scope="row">{{ forloop.counter }}</th>
+            <td>{{ proveedor.nombre }}</td>
+            <td>{{ proveedor.direccion }}</td>
+            <td>{{ proveedor.telefono }}</td>
+            <td>{{ proveedor.categoria.nombre }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
   </div>
 {% endblock %}

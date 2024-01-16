@@ -13,7 +13,8 @@ class ProveedorForm(forms.ModelForm):
             'nombre': forms.TextInput(attrs={'class': 'form-control'}),
             'direccion': forms.TextInput(attrs={'class': 'form-control'}),
             'telefono': forms.TextInput(attrs={'class': 'form-control'}),
-            'categoria': forms.Select(attrs={'class': 'form-select'}),
+            'categoria': forms.TextInput(attrs={'class': 'form-control'}),
+            'Usuario': forms.Select(attrs={'class': 'form-select'}),
             # Puedes agregar más campos y widgets según sea necesario
         }
 
@@ -25,6 +26,8 @@ class ClienteForm(forms.ModelForm):
             'nombre': forms.TextInput(attrs={'class': 'form-control'}),
             'direccion': forms.TextInput(attrs={'class': 'form-control'}),
             'telefono': forms.TextInput(attrs={'class': 'form-control'}),
+            'rut': forms.TextInput(attrs={'class': 'form-control'}),
+            'Usuario': forms.Select(attrs={'class': 'form-select'}),
             # Puedes agregar más campos y widgets según sea necesario
         }
 
